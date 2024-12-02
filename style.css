@@ -10,6 +10,8 @@ body {
   font-family: "Montserrat", sans-serif;
   background-color: #fefee3;
   /* background-color: #F8F9FA; */
+  overflow-x: hidden;
+
 }
 .header {
   width: 100%;
@@ -310,7 +312,7 @@ select {
 footer {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 100vw;
   background: linear-gradient(to bottom, #527d53, #439943);
   color: #fefee3;
   padding: 30px;
@@ -351,3 +353,12 @@ footer .upper {
   align-items: center;
   flex-direction: column;
 }
+/* .footer-underlinee{
+  display: block;
+  justify-content: center;
+  align-content: center;
+  gap:20px;
+  background-color: #fefee3;
+  height:1px; 
+  width: 80vw;
+} */
