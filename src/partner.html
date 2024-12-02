@@ -10,7 +10,7 @@
 
     <style>
         .container {
-            /* height: 100vh; */
+            height: 100%;
             display: flex;
             /* justify-content: center; */
             padding-top: 50px;
@@ -24,8 +24,10 @@
         h1 {
             display: flex;
             justify-content: center;
+            color: #439943;
+            font-size: 48px;
+            text-align: center;
         }
-
         .partner-grid-container {
             display: flex;
             flex-wrap: wrap;
@@ -38,7 +40,7 @@
             display: flex;
             flex-wrap: nowrap;
             justify-content: center;
-            gap: 60px;
+            gap: 100px;
             width: 100%;
             /* max-width: 1200px; */
             margin: 0 auto;
@@ -52,7 +54,7 @@
             /* Allow the card to adapt to content */
             background-color: #DDDDDD;
             /* Adjust for better contrast */
-            border-radius: 10px;
+            border-radius: 20px;
             border: 1px solid #080808;
             box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
             padding: 15px;
@@ -66,13 +68,12 @@
             width: 100%;
             height: auto;
             margin-bottom: 15px;
-            border-radius: 5px;
+            border-radius: 30px;
         }
 
         .partner-card h2 {
             font-size: 1.2rem;
             margin: 10px 0;
-            /* Space around the title */
         }
 
         .partner-content p {
@@ -83,9 +84,9 @@
 
         .partner-content a {
             color: #D68C45;
-            /* Blue link color */
             text-decoration: none;
             font-weight: bold;  
+            align-items: flex-end;
         }
 
         /* .partner-content a:hover {
@@ -110,11 +111,8 @@
             transition: 0.3s ease-in-out;
             background-color: #527d53;
         }
-        /* Media Queries for Extra Small Screens */
         @media (max-width: 768px) {
             .partner-grid {
-                /* display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
                 display: flex;
                 flex-wrap: wrap;
                 gap: 20px;
@@ -126,6 +124,9 @@
                 width: 100%;
                 width: 300px;
                 margin: auto;
+            }
+            .footer-des{
+                text-align: center;
             }
         }
     </style>
@@ -160,8 +161,22 @@
         <div class="partner-grid-container">
             <div class="partner-grid">
                 <div class="partner-card">
-                    <img src="../assets/COPPSARY - military greeen no project+ -for icon.png" alt="">
+                    <img src="../assets/COPPSARY-2.jpg" alt="">
                     <h2>COPPSARY - Project+</h2>
+                    <div class="partner-content">
+                        <p>The COPPSARY - project+ are a group 
+                            of Computer Science students excited 
+                            to share what we’re working on. From 
+                            projects to experiments, they’re putting 
+                            what we learn into action and inviting 
+                            you along for the journey.</p>
+                        <a href="#">View Website <i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="partner-card">
+                    <img src="../assets/COPPSROV.jpg" alt="" >
+                    <h2>COPPSROV</h2>
                     <div class="partner-content">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime odio est ut. In animi
                             laboriosam quasi, ipsum optio ratione ut id sint. Sit vero ea nesciunt quibusdam,
@@ -171,18 +186,7 @@
                 </div>
 
                 <div class="partner-card">
-                    <img src="../assets/COPPSARY - military greeen no project+ -for icon.png" alt="" >
-                    <h2>COPPSARY - Project+</h2>
-                    <div class="partner-content">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime odio est ut. In animi
-                            laboriosam quasi, ipsum optio ratione ut id sint. Sit vero ea nesciunt quibusdam,
-                            perspiciatis placeat iure?</p>
-                        <a href="#">View Website <i class="fa-solid fa-up-right-from-square"></i></a>
-                    </div>
-                </div>
-
-                <div class="partner-card">
-                    <img src="../assets/COPPSARY - military greeen no project+ -for icon.png" alt="">
+                    <img src="../assets/COPPSARY-dc-2.jpg" alt="">
                     <h2>COPPSARY - Project+</h2>
                     <div class="partner-content">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit deleniti autem laborum sit
@@ -193,6 +197,8 @@
                 </div>
             </div>
         </div>
+            <h1 class="footer-des">BECOME OUR PARTNER</h1>
+        <p style="text-align: center;color: #080808;font-size: 18px;">Join us to make everyone’s future bright. We're always looking for innovative partners who share our vision for the future of regulatory compliance.</p>
         <button>Get in Touch</button>
     </div>
     <!-- ======================================= FOOTER ======================================== -->
