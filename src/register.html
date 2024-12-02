@@ -27,7 +27,7 @@
       }
       .box {
         width: 700px;
-        height: 700px;
+        height: 780px;
         background-color: #fefee3;
         box-sizing: border-box;
         border: 1px solid black;
@@ -378,23 +378,37 @@
   <body>
     <div class="box">
       <div class="logo">
-        <a href="#" id="logo"><img src="../assets/Group 45.svg" alt=""></a>
+        <a href="#" id="logo"><img src="../assets/Group 45.svg" alt></a>
         <h2>Create Account</h2>
       </div>
 
       <div class="full-name">
-        <form action="first">
-          <label for="first">USERNAME: </label>
-          <br />
+        <form action="password">
+          <label for="password"> First name: </label><br />
+          <input style="margin-bottom: 15px;"  placeholder="Type your first name here..." type="'text'" />
+
+        </form>
+        <form action="password">
+          <label for="password"> Last name:</label><br />
           <input
-            placeholder="enter your username..."
-            type="text"
-            name="first"
-          />
+            placeholder="Type your last name here..."
+            type="'text'" />
+        </form>
+      </div>
+      <div class="full-name">
+        <form action="first">
+          <label for="first">Gender: </label>
+          <br />
+          <select name="gender" id="gender">
+            <option value="Select Type: ">Select Type:</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+
+          </select>
         </form>
         <form action="last">
           <label for="last">Occupation: </label>
-          <br />
+          <br>
           <select name="level" id="level">
             <option value="Select Type: ">Select Type:</option>
             <option value="Bacll">High School Student</option>
@@ -410,9 +424,9 @@
           <br />
           <select name="level">
             <option value="Select Type: ">Select Type:</option>
-           <option value="PNH">Phnom Penh</option>
-                    <option value="BTB">Battambang</option>
-                    <option value="SR">Siem Reap</option>
+            <option value="PNH">Phnom Penh</option>
+            <option value="BTB">Battambang</option>
+            <option value="SR">Siem Reap</option>
           </select>
         </form>
 
@@ -422,8 +436,7 @@
           <input
             placeholder="enter your phone number..."
             type="text"
-            name="first"
-          />
+            name="first" />
         </form>
       </div>
 
@@ -442,15 +455,14 @@
 
           <div class="checkbox">
             <input type="checkbox" />
-            <label for="">Remember me</label>
+            <label for>Remember me</label>
           </div>
         </form>
         <form action="password">
           <label for="password"> Confirm Password:</label><br />
           <input
             placeholder="Type your confirm password here..."
-            type="'text'"
-          />
+            type="'text'" />
         </form>
       </div>
 
@@ -465,7 +477,6 @@
         <button><a id="link" href="./login.html">Login</a></button>
       </div>
 
-     
     </div>
   </body>
 </html>
