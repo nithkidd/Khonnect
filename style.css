@@ -68,15 +68,13 @@ body {
     /* flex-direction: column; */
     flex-wrap: wrap;
   }
-  /* #first-choice,
-  #second-choice,
-  #third-choice,
-  #fourth-choice {
-    width: 100%;
-  } */
-   /* .navbar-right i{
-    display: inline;
-   } */
+  footer .upper{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 2;
+  }
 }
 /* -----------------------------------------------NAVBAR------------------------------------------ */
 
@@ -337,6 +335,7 @@ footer .upper {
   line-height: 1.5;
   text-decoration: none;
   color: #fefee3;
+  justify-content: center;
 }
 .float-right {
   line-height: 1.5;
