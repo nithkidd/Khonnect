@@ -3,133 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./styles.css">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles-contact.css">
     <link rel="icon" href="./assets/COPPSARY - military greeen no project+ -for icon.png">
     <script src="https://kit.fontawesome.com/d2aa775fb1.js" crossorigin="anonymous"></script>
+    
+
 </head>
 <body>
     <div class="header">
         <!-- ======================================= NAVBAR ======================================== -->
         <nav class="navbar">
             <div class="navbar-left">
-                <a href="#" id="logo"><img src="../assets/Group 45.svg" alt=""></a>
+                <a href="#" id="logo"><img style="max-width: 100%" src="../assets/logo-blue.svg" alt=""></a>
             </div>
           
             <div class="navbar-middle">
                 <ul class="nav-links">
-                    <li><a href="#">Home</a></li>
-          
-                    <li><a href="#">Roadmap</a></li>
-                    <li><a href="./src/partner.html">Our Partners</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./about.html">About Us</a></li>
+                
+                    <li><a href="./partner.html">Our Partners</a></li>
+                    <li><a href="./ContactUs.html">Contact Us</a></li>
                 </ul>
             </div>
           
             <div class="navbar-right">
-                <a href="#"><i class="fas fa-bell"></i></a>
-                <a href="#"><i class="fas fa-search"></i></a>
-                <a href="#"><i class="fas fa-user"></i></a>
+                <a href="./Notification.html"><i class="fas fa-bell"></i></a>
+                <a href="./search.html"><i class="fas fa-search"></i></a>
+                <a href=""><i class="fas fa-user"></i></a>
             </div>
         </nav>
     </div>
 
-    <!-- ======================================= PROFILE CONTENT ======================================== -->
+    <!-- ======================================= CONTACT US CONTENT ======================================== -->
     <div class="container">
-        <h1 class="profile-title">Profile</h1>
-        <div class="profile-card">
-            <div class="avatar-container">
-                <div class="avatar">
-                    <svg width="50" height="50" viewBox="0 0 24 24" fill="#666">
-                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                    </svg>
-                </div>
-            </div>
-
-            <form>
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label>First name:</label>
-                        <input type="text" class="form-control">
+        <h1>Send us a message</h1>
+        <h4>Send us a feedback or become our new partner by sending us an email</h4>
+        <div class="email-container">
+            <form autocomplete="off">
+                <div class="name-row">
+                    <div class="form-row">
+                        <label for="fname">First Name*</label>
+                        <input type="text" id="fname" name="fname" required>
                     </div>
-
-                    <div class="form-group">
-                        <label>Last name:</label>
-                        <input type="text" class="form-control">
-                    </div>
-
-                    <div class="form-group">
-                        <label>Gender:</label>
-                        <select class="form-control">
-                            <option>Select Gender</option>
-                            <option>Male</option>
-                            <option>Female</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Province/City:</label>
-                        <select class="form-control">
-                            <option>Select Province/City</option>
-                            <option>Banteay Meanchey</option>
-                            <option>Battambang</option>
-                            <option>Kampong Cham</option>
-                            <option>Kampong Chhnang</option>
-                            <option>Kampong Speu</option>
-                            <option>Kampong Thom</option>
-                            <option>Kampot</option>
-                            <option>Kandal</option>
-                            <option>Kep</option>
-                            <option>Koh Kong</option>
-                            <option>Kratié</option>
-                            <option>Mondulkiri</option>
-                            <option>Oddar Meanchey</option>
-                            <option>Pailin</option>
-                            <option>Phnom Penh</option>
-                            <option>Preah Vihear</option>
-                            <option>Pursat</option>
-                            <option>Prey Veng</option>
-                            <option>Ratanakiri</option>
-                            <option>Siem Reap</option>
-                            <option>Preah Sihanouk</option>
-                            <option>Stung Treng</option>
-                            <option>Svay Rieng</option>
-                            <option>Takéo</option>
-                            <option>Tboung Khmum</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Phone Number:</label>
-                        <input type="tel" class="form-control">
-                    </div>
-
-                    <div class="form-group">
-                        <label>Occupation:</label>
-                        <select class="form-control">
-                            <option>Select Occupation</option>
-                            <option>Highschool Student</option>
-                            <option>College Student</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Email Address:</label>
-                        <input type="email" class="form-control">
-                    </div>
-
-                    <div class="form-group">
-                        <label>Password:</label>
-                        <input type="password" class="form-control">
-                    </div>
-
-                    <div class="form-group bio-field">
-                        <label>Bio:</label>
-                        <textarea class="form-control"></textarea>
+                    <div class="form-row">
+                        <label for="lname">Last Name*</label>
+                        <input type="text" id="lname" name="lname" required>
                     </div>
                 </div>
-
-                <button type="submit" class="save-btn">SAVE CHANGE</button>
+                
+                <div class="form-row">
+                    <label for="contactEmail">Email*</label>
+                    <input type="email" id="contactEmail" name="contactEmail" required>
+                </div>
+                
+                <div class="form-row">
+                    <label for="messageSubject">Subject*</label>
+                    <input type="text" id="messageSubject" name="messageSubject" required>
+                </div>
+                
+                <div class="form-row">
+                    <label for="messageContent">Message*</label>
+                    <textarea id="messageContent" name="messageContent" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">SEND</button>
             </form>
         </div>
     </div>
@@ -144,7 +83,6 @@
             <div class="float-mid">
                 <h3>Quick Link</h3>
                 <a href="#">About Us</a>
-                <a href="#">Roadmap</a>
                 <a href="./src/partner.html">Our Partners</a>
                 <a href="#">Contact Us</a>
             </div>
@@ -178,5 +116,6 @@
                 <p>Developed By: Coppsary Team</p>
             </div>
     </footer>
+</div>
 </body>
 </html>
