@@ -219,7 +219,10 @@ body {
 }
 
 .submit-btn:hover {
-    background-color: #439943;
+  transform: scale(1.05);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  
+    background-color: #1758ad;
 }
 
 input:-webkit-autofill,
