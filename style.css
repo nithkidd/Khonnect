@@ -198,7 +198,7 @@ nav ul li a:hover::after {
   --burger-line-width: 1.125em;
   --burger-line-height: 0.125em;
   --burger-offset: 0.625em;
-  --burger-bg: #1A73E8;#1A73E8;
+  --burger-bg: #1A73E8;
   --burger-color: #333;
   --burger-line-border-radius: 0.1875em;
   --burger-diameter: 3.125em;
