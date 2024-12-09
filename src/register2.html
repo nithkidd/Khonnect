@@ -462,58 +462,62 @@ body {
     }
   }
 /* ----------------------------------------------- MEDIA QUERY ------------------------------------------ */
-
-footer {
-  display: flex;
-  justify-content: space-between;
-  width: 100vw;
-  /* background: linear-gradient(to bottom, #527d53, #439943); */
-  background: linear-gradient(to bottom, #1A73E8, #005BB5);
-
-  color: #fff;
-  padding: 30px;
-  margin: 0;
-  flex-direction: column;
-  overflow-y: hidden;
+@media (max-width: 768px) {
+    
+  body > div.wrapper > div.left-container{
+    display: none;
+  }
+  .wrapper{
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+   
+      height: auto;
+     
+  }
+  .box ,.left-container{
+    width: 330px;
+    height: auto;
+    margin-bottom: 20px;
+  }
 }
-footer,
-p {
-  color: #fff;
+@media (max-width: 350px) {
+  body > div.wrapper > div.left-container{
+    display: none;
+  }
+  .wrapper{
+      display: flex;
+      flex-direction: column;
+      width: auto;
+      height: auto;
+     
+  }
+  .box {
+    display: flex;
+    flex-direction: column;
+    width: 293px;
+    height: auto;
+    width: 50%;
+    margin-bottom: 20px;
+
+  }
+   
+
 }
 
-footer .upper {
-  display: flex;
-  justify-content: space-around;
+.left-container{
+  width: 35%;
+  padding: 10px;
 }
-
-.float-mid a {
+.wrapper{
+  width: 100%;
+  gap:  5%;
   display: flex;
-  line-height: 1.5;
-  text-decoration: none;
-  color: #fff;
   justify-content: center;
-}
-.float-right {
-  line-height: 1.5;
-}
-.social-icon {
-  display: flex;
-  justify-content: space-evenly;
-}
-.footer-underline {
-  display: flex;
-
-  justify-content: center;
-}
-
-.credit {
-  display: flex;
   align-items: center;
-  flex-direction: column;
+  height: 100vh;
 }
-.credit p{
-  color: #e0e0e0;
-}
+
     </style>
     </head>
     <body>
@@ -532,9 +536,12 @@ footer .upper {
             </nav>
         </div>
         <!-- ======================================= MAIN  ======================================== -->
-        <div class="main">
+    
 
-
+        <div class="wrapper">
+          <div class="left-container">
+            <img src="../assets/create-img (1).png" alt style="width: 90%;">
+          </div>
         <div class="box">
             <div class="logo">
             
@@ -542,9 +549,9 @@ footer .upper {
             </div>
       
             <div class="full-name">
-              <form action="password">
+              <form action="password" >
                 <label for="password"> First name: </label><br />
-                <input style="margin-bottom: 15px;"  placeholder="Type your first name here..." type="'text'" />
+                <input style="margin-bottom: 15px;"  placeholder="Type your first name here..." type="'text'"  />
       
               </form>
               <form action="password">
@@ -583,9 +590,31 @@ footer .upper {
                 <br />
                 <select name="level">
                   <option value="Select Type: ">Select Type:</option>
-                  <option value="PNH">Phnom Penh</option>
-                  <option value="BTB">Battambang</option>
-                  <option value="SR">Siem Reap</option>
+                  <option>Banteay Meanchey</option>
+                  <option>Battambang</option>
+                  <option>Kampong Cham</option>
+                  <option>Kampong Chhnang</option>
+                  <option>Kampong Speu</option>
+                  <option>Kampong Thom</option>
+                  <option>Kampot</option>
+                  <option>Kandal</option>
+                  <option>Kep</option>
+                  <option>Koh Kong</option>
+                  <option>Kratié</option>
+                  <option>Mondulkiri</option>
+                  <option>Oddar Meanchey</option>
+                  <option>Pailin</option>
+                  <option>Phnom Penh</option>
+                  <option>Preah Vihear</option>
+                  <option>Pursat</option>
+                  <option>Prey Veng</option>
+                  <option>Ratanakiri</option>
+                  <option>Siem Reap</option>
+                  <option>Preah Sihanouk</option>
+                  <option>Stung Treng</option>
+                  <option>Svay Rieng</option>
+                  <option>Takéo</option>
+                  <option>Tboung Khmum</option>
                 </select>
               </form>
       
@@ -626,7 +655,7 @@ footer .upper {
             </div>
       
             <div class="Create">
-              <button>Create</button>
+              <button>Create </button>
             </div>
       
             <div class="dont">
@@ -638,11 +667,12 @@ footer .upper {
             </div>
       
           </div>
-        
+         
         </div>
+        
         <!-- ======================================= MAIN  ======================================== -->
 
-        <footer>
+        <!-- <footer>
             <div class="upper">
 
                 <div class="float-left">
@@ -702,12 +732,12 @@ footer .upper {
                             fill="#FEFEE3"></path>
                     </svg>
                 </div>
-                <!-- <div class="footer-underlinee"></div> -->
+            <div class="footer-underlinee"></div> 
                 <div class="credit">
                     <p>© 2024 KHonnect - All Right reserved.</p>
                     <p>Developed By: Coppsary Team</p>
                 </div>
-            </div></footer>
+            </div></footer> -->
 
         <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
     </body>
