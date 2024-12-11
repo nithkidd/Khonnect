@@ -406,6 +406,7 @@ footer .upper {
  }
  .container1{
     height: 100%;
+    
  }
  .container3{
     color: #1A73E8;
@@ -464,13 +465,63 @@ text-align: center;
         
 
     }  
+    .container4{
+        color: white;
+        height: 100%;
+        background-color:  #1255ad;
+        margin: 5%;
+        margin-top: 0;
+        border-radius: 10px;
+       padding: 2%;
+        
+        
+
+    }  
     body > div.main > div.container3 > div{
         display: flex;
         justify-content: center;
         align-items: center;
         padding-top: 20px;
     }
-   
+    @media (max-width: 1000px) {
+        body > div.header > nav > div.navbar-right {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            
+          }
+        .main{
+            grid-template-columns: 1fr;
+            grid-template-rows: 2/3fr 1fr 1fr 1fr;
+           
+            
+        }
+        .container1{
+            height: 100%;
+            padding: 5%;
+         }
+        body > div.main > div.container3 > div{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        footer .upper{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            line-height: 2;
+          }
+    }
+      @media (max-width: 688px) {
+      }
+      @media (max-width: 375px) {
+    
+      }
+     
+    
+      
     </style>
     </head>
     <body>
@@ -479,8 +530,7 @@ text-align: center;
             <!-- ======================================= NAVBAR ======================================== -->
             <nav class="navbar">
                 <div class="navbar-left">
-                    <a href="../index.html" id="logo"><img src="../assets/logo-blue.svg"
-                            alt></a>
+                    <a href="#" id="logo"><img src="../assets/logo-blue.svg" style="max-width: 100%"  alt></a>
                 </div>
 
                 <div class="navbar-middle">
@@ -566,15 +616,18 @@ text-align: center;
                     alt>
             </div>
             <div class="container2">
-                <h2>Description</h2> <div>
+                <h2  style="font-size: 2vmax;" >Description</h2> <div>
                     <hr>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, molestiae cumque architecto minima nulla vero est, cupiditate quos nihil natus consectetur, voluptate illo voluptates atque earum magnam possimus harum nam.
+                    </p>
                 </div>
             </div>
             <div class="container3">
-                <h2>
+                <h2 style="font-size: 3vmax;" >
                     Digital Techo Scholarship 2024
                 </h2>
-                <p>Up to <span> 24000 USD</span> Scholarship with Digital Techo
+                <p  style="font-size: 2vmax;" >Up to <span  style="font-size: 2vmax;" >  24000 USD</span> Scholarship with Digital Techo
                     Scholarship</p>
                     <button>
                         Deadline: 18 Nov 2024
@@ -592,9 +645,10 @@ text-align: center;
                     </div>
                     
             </div>
-            <div class="container2">
-                <h2>Featured Program</h2> <div>
+            <div class="container4">
+                <h2  style="font-size: 2vmax;" >Featured Program</h2> <div>
                     <hr>
+                    <p  > Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis id veritatis sequi maiores, neque facilis cupiditate, asperiores architecto saepe placeat nisi ab qui in nulla esse! Quos, dolorum? Sint, velit? </p>
                 </div>
             </div>
 
