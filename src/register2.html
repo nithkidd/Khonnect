@@ -280,51 +280,7 @@
       .login button:hover #link {
         color: white;
       }
-      @media (max-width: 550px) {
-        body{
-          width: 100%;
-          height: auto;
-        }
-        .wrapper {
-          margin-top: 30%;
-        }
-
-        .box {
-          width: 450px;
-          height: auto;
-          padding-left: 5%;
-          box-sizing: border-box;
-          padding-bottom: 40px;
-        }
-
-        .full-name form input {
-          width: 300px;
-          margin-bottom: 15px;
-        }
-
-        .full-name form select {
-          width: 300px;
-        }
-
-        .email {
-          width: 278px;
-          padding-top: 10px;
-        }
-
-        .password-two input {
-          width: 300px;
-        }
-
-        .checkbox input {
-          width: auto;
-          margin: 0;
-        }
-
-        .Create {
-          margin-top: 20px;
-        }
-      }
-
+   
       @media (max-width: 700px) {
         
       * {
@@ -425,6 +381,9 @@
       @media (max-width: 450px) {
         
         .box {
+          text-align: start;
+          padding-left: 0;
+          padding-right: 0;
           width: 350px;
           height: auto;
           padding-left: 5%;
@@ -473,6 +432,9 @@
         }
 
         .box {
+          text-align: start;
+          padding-left: 0;
+          padding-right: 0;
           width: 300px;
           height: auto;
           box-sizing: border-box;
@@ -511,14 +473,32 @@
       /* ----------------------------------------------- MEDIA QUERY ------------------------------------------ */
 
     
+.navbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F4F4F9;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: #080808;
+  flex: auto;
+}
     </style>
   </head>
 
   <body>
-  
+   
     <!-- ======================================= MAIN  ======================================== -->
+    <nav class="navbar">
+      <div class="navbar-left " >
+    
 
+      </div>
+        <a href="../index.html" id="logo"><img style="max-width: 100%"
+            src="../assets/logo-blue.svg" alt></a>
+ 
+      </nav>
     <div class="main">
+  
       <div class="box">
         <div class="logo">
           <h2 style="margin: 5%">Create Account</h2>

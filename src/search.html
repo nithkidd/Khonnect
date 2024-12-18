@@ -34,11 +34,90 @@
         top: 0;
         z-index: 1;
       }
-      
+      .hamburger {
+
+        display: none;
+      }
+  
+      .menu {
+        display: none;
+      }
+  
+  
+  
       /* ----------------------------------------------- MEDIA QUERY ------------------------------------------ */
       
       @media (max-width: 1145px) {
     
+        .hamburger {
+  
+          width: 35px;
+          height: 30px;
+          display: flex;
+          /* Show hamburger on smaller screens */
+          flex-direction: column;
+          justify-content: space-between;
+          cursor: pointer;
+          position: fixed;
+          top: 20px;
+          left: 20px;
+          z-index: 10;
+        }
+  
+        .bar {
+          width: 100%;
+          height: 5px;
+          background-color: #333;
+          border-radius: 5px;
+          transition: 0.3s;
+        }
+  
+        /* Menu Items */
+        .menu {
+  
+          display: block;
+          /* Make the menu accessible */
+          position: fixed;
+          padding-top: 80px;
+          top: 0px;
+          left: 0;
+          height: 100%;
+          width: 200px;
+          background: white;
+          box-shadow: 2px 0 6px rgba(0, 0, 0, 0.2);
+          transform: translateX(-100%);
+          transition: transform 0.3s ease-in-out;
+        }
+  
+        .menu.open {
+          transform: translateX(0);
+        }
+  
+        .menu a {
+  
+          text-decoration: none;
+          color: black;
+          display: block;
+          padding: 15px;
+          border-bottom: 1px solid #ddd;
+        }
+  
+        .menu a:hover {
+          background-color: #f0f0f0;
+        }
+  
+        /* Open/Close Animations for Hamburger */
+        .hamburger.open .bar:nth-child(1) {
+          transform: rotate(45deg) translate(5px, 5px);
+        }
+  
+        .hamburger.open .bar:nth-child(2) {
+          opacity: 0;
+        }
+  
+        .hamburger.open .bar:nth-child(3) {
+          transform: rotate(-45deg) translate(5px, -5px);
+        }
         body > div.main-content{
           width: auto;
           padding-left: 150px;
@@ -130,7 +209,20 @@
         
       }
       /* -----------------------------------------------NAVBAR------------------------------------------ */
-      
+        
+.navbar-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.navbar-left .hamburger{
+    margin-top: 8px;
+}
+.navbar-left a{
+  margin-left: 30px;
+}
+
       .navbar {
         display: flex;
         justify-content: space-between;
@@ -601,6 +693,16 @@
         padding-left: 50px;
         padding-right: 50px;
       }  
+      .navbar-right a{
+        display: none;
+      }
+      body>div.header>nav>div.navbar-right {
+      
+      
+        justify-content: end;
+      
+        margin-bottom: 10px;
+      }
       }
   
 
@@ -610,8 +712,27 @@
     <div class="header">
       <!-- ======================================= NAVBAR ======================================== -->
       <nav class="navbar">
-        <div class="navbar-left">
-          <a  href="../index.html" id="logo"><img style="max-width: 100%"
+        <div class="navbar-left " >
+       
+          <div class="hamburger" id="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    
+        <!-- Menu -->
+        <div class="menu" id="menu">
+         
+        
+          <a href="../src/search.html"><i class="fas fa-search"></i></a>
+            <a href="../index.html">Home</a>
+            <a href="./about.html">About Us</a>
+            <a href="./partner.html">Our Partners</a>
+            <a href="./ContactUs.html">Contact Us</a>
+          
+
+        </div>
+          <a href="../index.html" id="logo"><img style="max-width: 170%"
               src="../assets/logo-blue.svg" alt></a>
         </div>
 
@@ -705,7 +826,7 @@
     <div class="grid-container">
 
       <div class="card">
-        <a href="#">
+        <a href="../src/content.html">
           <img src="../assets/digital techo.png"
             alt="Melbourne Research Scholarship">
           <div class="card-content">
@@ -720,7 +841,7 @@
       </div>
 
       <div class="card">
-        <a href="#">
+        <a href="../src/content.html">
           <img src="../assets/digital techo.png"
             alt="Chulabhorn Graduate Institute">
           <div class="card-content">
@@ -735,7 +856,7 @@
       </div>
 
       <div class="card">
-        <a href="#">
+        <a href="../src/content.html">
           <img src="../assets/digital techo.png"
             alt="Chulabhorn Graduate Institute">
           <div class="card-content">
@@ -750,7 +871,7 @@
       </div>
 
       <div class="card">
-        <a href="#">
+        <a href="../src/content.html">
           <img src="../assets/digital techo.png"
             alt="Melbourne Research Scholarship">
           <div class="card-content">
@@ -765,7 +886,7 @@
       </div>
 
       <div class="card">
-        <a href="#">
+        <a href="../src/content.html">
           <img src="../assets/digital techo.png"
             alt="Chulabhorn Graduate Institute">
           <div class="card-content">
@@ -780,7 +901,7 @@
       </div>
 
       <div class="card">
-        <a href="#">
+        <a href="../src/content.html">
           <img src="../assets/digital techo.png"
             alt="Chulabhorn Graduate Institute">
           <div class="card-content">
@@ -795,7 +916,7 @@
       </div>
 
       <div class="card">
-        <a href="#">
+        <a href="../src/content.html">
           <img src="../assets/digital techo.png"
             alt="Chulabhorn Graduate Institute">
           <div class="card-content">
@@ -810,7 +931,7 @@
       </div>
 
       <div class="card">
-        <a href="#">
+        <a href="../src/content.html">
           <img src="../assets/digital techo.png"
             alt="Chulabhorn Graduate Institute">
           <div class="card-content">
@@ -825,7 +946,7 @@
       </div>
 
       <div class="card">
-        <a href="#">
+        <a href="../src/content.html">
           <img src="../assets/digital techo.png"
             alt="Melbourne Research Scholarship">
           <div class="card-content">
@@ -908,7 +1029,15 @@
         <p>Developed By: Coppsary Team</p>
       </div>
     </footer>
-
+    <script>
+      const hamburger = document.getElementById('hamburger');
+      const menu = document.getElementById('menu');
+  
+      hamburger.addEventListener('click', () => {
+          hamburger.classList.toggle('open');
+          menu.classList.toggle('open');
+      });
+  </script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
   </body>
 </html>

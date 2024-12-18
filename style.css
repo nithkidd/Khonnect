@@ -549,12 +549,15 @@ nav ul li a:hover::after {
 }
 
 /* ----------------------------------------------- FLEX CHOICE ------------------------------------------ */
-
 .flex-choice {
   display: flex;
   gap: 50px;
   justify-content: center;
-  padding-bottom: 15px;
+  padding-bottom: 20px;
+ text-align: center;
+  border-radius: 15px;
+  padding: 20px;
+   color: #1A73E8;
 }
 
 #first-choice,
@@ -562,36 +565,50 @@ nav ul li a:hover::after {
 #third-choice,
 #fourth-choice {
   width: 250px;
-  height: 70px;
-  background-color: #f8f8f8;
-  border-radius: 10px;
-  border: 1px solid #18447c;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 80px;
+  background-color: #ffffff; /* Clean white card */
+  border-radius: 12px;
+ 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Depth shadow */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
 }
 
-#third-choice p {
+#first-choice p,
+#second-choice p,
+#third-choice p,
+#fourth-choice p {
+  padding: 10px 15px;
   color: #1A73E8;
-  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
 }
 
-.label-title {
-  display: flex;
-  justify-content: flex-end;
-  align-self: flex-end;
-  flex-wrap: nowrap;
-  padding: 10px;
-  font-size: 13px;
-  color: #424242dd;
+.form-select {
+  padding-left: 15px; /* Consistent padding */
+  padding-right: 15px;
 }
 
-.form-select,
 select {
-  display: grid;
-  padding-left: 1px;
-  padding-top: 8px;
-  border: none;
-  background: none;
+  width: 100%;
+  padding: 10px 12px; /* Increased padding for better usability */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 8px; /* Rounded corners */
   font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: #333; /* Neutral text color */
+  background-color: #fdfdfd; /* Slightly off-white */
+  appearance: none; /* Removes default arrow styling */
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"%3E%3Cpolygon points="0,0 10,0 5,5" style="fill:%23999999"%3E%3C/polygon%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 10px;
+}
+
+select:focus {
+  outline: none;
+  border-color: #1A73E8; /* Highlight on focus */
+  box-shadow: 0 0 5px rgba(26, 115, 232, 0.5); /* Glow effect */
 }
 
 .section-title {
@@ -600,19 +617,17 @@ select {
   gap: 10px;
   width: 100%;
   grid-column: 1 / -1;
+  margin-bottom: 20px;
 }
 
 .section-title h2 {
   font-size: 1.5rem;
   font-weight: bold;
-  margin: 0;
   color: #1A73E8;
-  white-space: nowrap;
+  margin: 0;
 }
 
 .section-title .underline {
-  display: inline;
-  width: 100%;
   flex-grow: 1;
   height: 3px;
   border-radius: 5px;

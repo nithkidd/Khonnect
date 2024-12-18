@@ -91,6 +91,19 @@
       padding-right: 30px;
 
     }
+      
+.navbar-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.navbar-left .hamburger{
+    margin-top: 8px;
+}
+.navbar-left a{
+  margin-left: 30px;
+}
 
     /* -----------------------------------------------MIDDLE - NAVBAR------------------------------------------ */
     .navbar-middle .nav-links {
@@ -517,8 +530,91 @@
       align-items: center;
       padding-top: 20px;
     }
+    
+    .hamburger {
 
+      display: none;
+    }
+
+    .menu {
+      display: none;
+    }
+
+
+
+    /* ----------------------------------------------- MEDIA QUERY ------------------------------------------ */
+    
     @media (max-width: 1000px) {
+      .hamburger {
+
+        width: 35px;
+        height: 30px;
+        display: flex;
+        /* Show hamburger on smaller screens */
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 10;
+      }
+
+      .bar {
+        width: 100%;
+        height: 5px;
+        background-color: #333;
+        border-radius: 5px;
+        transition: 0.3s;
+      }
+
+      /* Menu Items */
+      .menu {
+
+        display: block;
+        /* Make the menu accessible */
+        position: fixed;
+        padding-top: 80px;
+        top: 0px;
+        left: 0;
+        height: 100%;
+        width: 200px;
+        background: white;
+        box-shadow: 2px 0 6px rgba(0, 0, 0, 0.2);
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .menu.open {
+        transform: translateX(0);
+      }
+
+      .menu a {
+
+        text-decoration: none;
+        color: black;
+        display: block;
+        padding: 15px;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .menu a:hover {
+        background-color: #f0f0f0;
+      }
+
+      /* Open/Close Animations for Hamburger */
+      .hamburger.open .bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+
+      .hamburger.open .bar:nth-child(2) {
+        opacity: 0;
+      }
+
+      .hamburger.open .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+      }
+
       body>div.header>nav>div.navbar-right {
         display: flex;
         flex-direction: row;
@@ -553,10 +649,44 @@
         line-height: 2;
       }
     }
+    @media (max-width: 600px) {
+      .main {
+      display: flex;
+      flex-direction: column;
+      }
+      .navbar-right a {
+        display: none;
+      }
 
-    @media (max-width: 688px) {}
+      body>div.header>nav>div.navbar-right {
 
-    @media (max-width: 375px) {}
+
+        justify-content: end;
+
+        margin-bottom: 10px;
+      }
+      @media (max-width: 320px) {
+        
+      .text-box {
+        padding: 10px;
+        overflow: hidden;
+      }
+
+      .text-content {
+        height: 40vh;
+        overflow: hidden;
+        transition: height 0.5s ease, padding 0.3s ease;
+      }
+
+      .text-box.expanded .text-content {
+        height: auto;
+        /* Expand to show all content */
+      }
+
+      }
+    }
+
+   
   </style>
 </head>
 
@@ -565,7 +695,26 @@
   <div class="header">
     <!-- ======================================= NAVBAR ======================================== -->
     <nav class="navbar">
-      <div class="navbar-left">
+      <div class="navbar-left ">
+       
+        <div class="hamburger" id="hamburger">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+      </div>
+  
+      <!-- Menu -->
+      <div class="menu" id="menu">
+       
+      
+        <a href="../src/search.html"><i class="fas fa-search"></i></a>
+          <a href="../index.html">Home</a>
+          <a href="./about.html">About Us</a>
+          <a href="./partner.html">Our Partners</a>
+          <a href="./ContactUs.html">Contact Us</a>
+        
+
+      </div>
         <a id="logo" href="../index.html"><img src="../assets/logo-blue.svg" alt style="max-width: 100%"></a>
       </div>
 
@@ -624,7 +773,7 @@
   <div class="main">
 
     <div class="container1">
-      <img src="../assets/digital techo.png" alt style="max-width: 100%;">
+      <img src="../assets/digital techo.png" alt style="max-width: 100%;border-radius:20px">
     </div>
     <div class="container2">
       <h2 style="font-size: 2vmax;">Description</h2>
@@ -823,6 +972,14 @@
       textBox.classList.toggle('expanded');
       this.textContent = textBox.classList.contains('expanded') ? 'See Less' : 'See More';
     });
+   
+      const hamburger = document.getElementById('hamburger');
+      const menu = document.getElementById('menu');
+
+      hamburger.addEventListener('click', () => {
+          hamburger.classList.toggle('open');
+          menu.classList.toggle('open');
+      });
 
   </script>
   <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
