@@ -20,10 +20,26 @@
       <!-- ======================================= NAVBAR ======================================== -->
       <nav class="navbar">
         <div class="navbar-left " >
-          <!-- <div class="hamburger" id="hamburger" aria-label="Toggle navigation">
-            ☰
-          </div> -->
-          <a href="./index.html" id="logo"><img style="max-width: 100%"
+       
+          <div class="hamburger" id="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    
+        <!-- Menu -->
+        <div class="menu" id="menu">
+         
+        
+          <a href="./src/search.html"><i class="fas fa-search"></i></a>
+            <a href="/Khonnect/index.html ">Home</a>
+            <a href="./src/about.html">About Us</a>
+            <a href="./src/partner.html">Our Partners</a>
+            <a href="./src/ContactUs.html">Contact Us</a>
+          
+
+        </div>
+          <a href="./index.html" id="logo"><img style="max-width: 170%"
               src="./assets/logo-blue.svg" alt></a>
         </div>
 
@@ -406,7 +422,15 @@
           <p>Developed By: Coppsary Team</p>
         </div>
       </footer>
+      <script>
+        const hamburger = document.getElementById('hamburger');
+        const menu = document.getElementById('menu');
 
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            menu.classList.toggle('open');
+        });
+    </script>
       <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
     </body>
   </html>
